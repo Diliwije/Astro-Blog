@@ -1,3 +1,8 @@
+---
+import Header from '../components/share/Header.astro';
+import Footer from '../components/share/Footer.astro';
+import Chat from '../components/share/Chat.astro';
+---
 <!doctype html>
 <html lang="en">
 	<head>
@@ -8,8 +13,14 @@
 		<title>Astro Basics</title>
 	</head>
 	<body>
-		<slot />
+
+    <Header currentPath="{currentPath}"/>
+    <Chat/>
+    <main>
+        <slot />
+    </main>
 	</body>
+    <Footer/>
 </html>
 
 <style>
